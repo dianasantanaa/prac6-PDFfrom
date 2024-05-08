@@ -1,0 +1,31 @@
+<!DOCTYPE html><!--informa al navegdor que version de HTML se ocupa-->
+<html lang="en"><!--se utiliza para comenzar a estructurar y el idioma-->
+<head><!--información general acerca del documento, incluyendo su título y
+    enlaces a scripts y hojas de estilos-->
+    <meta charset="UTF-8">"><!--responsable de que se muestre el contenido correctamente y con caracteres-->
+    <!-- metaetiqueta mediante la que se establece si se puede hacer zoom en una página, el zoom inicial o 
+        la anchura de la pantalla del dispositivo-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title><!--se encarga de dale titulo a la pestaña de la pagina-->
+    <link rel="stylesheet" href="formulario.css"/><!--se enlaza una hoja de estilo-->
+</head><!--se cierra la parte de la informacion general-->
+<body> <!--se escribe el contenido que ira dentro de la pagina web-->
+    
+    <form id="myfrom"><!--comenzamos colocando un from para crear el formulario-->
+        <h1>FORMULARIO</h1><!--añadimos un titulo pincipal-->
+        <label for="fname">Nombre</label></br><!--añade un texto para indicar que el nombre va ahi-->
+        <input type="text" id="fname" name="fname" required/></br><!--indica el lugar en donde se llenara el campo nombre-->
+        </br>
+        <label for="1name">Apellido</label></br><!--añade un texto para indicar que el apellido va ahi-->
+        <input type="text" id="lname" name="lname" required/></br></br><!--indica el lugar en donde se llenara el campo apellido-->
+        <label for="email">Correo Electronico</label></br><!--añade un texto para indicar que el correo va ahi-->
+        <input type="email" id="email" name="email" required/></br></br><!--indica el lugar en donde se llenara el campo correo-->
+        <label for="rfc">Registro Federal de Contribuyentes</label></br><!--añade un texto para indicar que el rfc va ahi-->
+        <input type="text" id="rfc" name="rfc" required/></br></br><!--indica el lugar en donde se llenara el campo rfc-->
+        <input type="button" value="GUARDAR como PDF" onclick="generatePDF()"/><!--se añade un boton para generar el PDF-->
+    </form><!--se termina el formulario-->
+    <!--añadimos el siguiente link para que ayude a transformar en pdf-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+    <script src="script.js"></script><!--se llama el scrip-->
+</body>
+</html>
